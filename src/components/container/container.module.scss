@@ -1,3 +1,4 @@
+@import './../../styles/breakpoints';
 .container {
   width: 1200px;
   margin: 0 auto;
@@ -5,21 +6,21 @@
   margin-bottom: 20px;
   //   outline: 1px solid grey;
 
-  //   max-width: $mobile;
-  //   margin-left: auto;
-  //   margin-right: auto;
-  //   padding-left: 20px;
-  //   padding-right: 20px;
+  max-width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
 
-  //   @media screen and (min-width: $tablet) {
-  //     max-width: $tablet;
-  //     padding-left: 50px;
-  //     padding-right: 50px;
-  //   }
+  @media screen and (min-width: $tablet) {
+    max-width: $tablet;
+    padding-left: 50px;
+    padding-right: 50px;
+  }
 
-  //   @media screen and (min-width: $desktop) {
-  //     max-width: $desktop;
-  //     padding-left: 110px;
-  //     padding-right: 110px;
-  //   }
+  @media screen and (min-width: $desktop) {
+    max-width: $desktop;
+    padding-left: 110px;
+    padding-right: 110px;
+  }
 }
