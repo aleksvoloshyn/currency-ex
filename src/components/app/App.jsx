@@ -1,13 +1,25 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Container from 'components/container/Container';
 import Header from 'components/header/Header';
 import Board from 'components/board/Board';
+import { getCurrencyCodes } from 'sevices/currency';
 
 function App() {
   const [amountLeft, setAmountLeft] = useState('');
   const [currencyLeft, setCurrencyLeft] = useState('');
   const [amountRight, setAmountRight] = useState('');
   const [currencyRight, setCurrencyRight] = useState('');
+  const [usd, setUsd] = useState({});
+  const [eur, setEur] = useState({});
+
+  useEffect(() => {
+    getCurrencyCodes().then(data => {
+      const eurCurrency = data.find(val => val.cc === 'EUR');
+      const usdCurrency = data.find(val => val.cc === 'USD');
+      setEur(eurCurrency || {});
+      setUsd(usdCurrency || {});
+    });
+  }, []);
 
   const handleAmountLeftChange = event => {
     setAmountLeft(event.target.value);
@@ -26,7 +38,7 @@ function App() {
   };
   return (
     <Container>
-      <Header></Header>
+      <Header eur={eur} usd={usd} />
       <Board
         amountLeft={amountLeft}
         currencyLeft={currencyLeft}
