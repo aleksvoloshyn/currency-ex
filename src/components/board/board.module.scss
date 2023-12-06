@@ -1,3 +1,21 @@
 .board {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.board__left,
+.board__right {
+  display: flex;
+}
+
+.board__result {
+  display: flex;
+  flex-direction: column;
+}
+.board__title {
+  flex-basis: 100%;
 }

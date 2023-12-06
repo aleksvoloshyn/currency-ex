@@ -15,13 +15,9 @@
 
   @media screen and (min-width: $tablet) {
     max-width: $tablet;
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   @media screen and (min-width: $desktop) {
     max-width: $desktop;
-    padding-left: 110px;
-    padding-right: 110px;
   }
 }
