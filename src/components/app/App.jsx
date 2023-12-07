@@ -5,10 +5,10 @@ import Board from 'components/board/Board';
 import { getCurrencyCodes } from 'sevices/currency';
 
 function App() {
-  const [amountLeft, setAmountLeft] = useState('');
-  const [currencyLeft, setCurrencyLeft] = useState('');
-  const [amountRight, setAmountRight] = useState('');
-  const [currencyRight, setCurrencyRight] = useState('');
+  const [amountLeft, setAmountLeft] = useState('1');
+  const [currencyLeft, setCurrencyLeft] = useState('UAH');
+  const [amountRight, setAmountRight] = useState('1');
+  const [currencyRight, setCurrencyRight] = useState('UAH');
   const [usd, setUsd] = useState({});
   const [eur, setEur] = useState({});
 
@@ -36,6 +36,7 @@ function App() {
   const handleCurrencyRightChange = event => {
     setCurrencyRight(event.target.value);
   };
+
   return (
     <Container>
       <Header eur={eur} usd={usd} />
